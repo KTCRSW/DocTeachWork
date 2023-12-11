@@ -1,8 +1,16 @@
 <?php include "header.php"; ?>
 <link rel="icon" type="image/x-icon" href="https://cdn.discordapp.com/attachments/960423388369813514/1119515459730026526/logo.png">
 <nav class=" top-0 z-50 w-full bg-dark border-dark border-gray-200 dark:bg-gray-800 dark:border-gray-700 ">
+
    <div class="px-3 py-3 lg:px-5 lg:pl-3">
+
       <div class="flex items-center justify-between">
+         <input type="checkbox" id="menu-toggle" class="hidden">
+         <label for="menu-toggle" class="cursor-pointer text-white block p-2 lg:hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
+               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+         </label>
          <div class="flex items-center justify-start">
             <a href="index.php" class="flex ml-2 md:mr-24">
                <img src="https://cdn.discordapp.com/attachments/960423388369813514/1119515459730026526/logo.png" class="h-10 mr-3 mb-2" alt="EDS Logo" />
@@ -17,7 +25,7 @@
                   <img id="image" onclick="show()" src="../../frontend/image/null_user.png" alt="user photo">
                </div>
             </div>
-            <p class="text-white ml-2 text-[16px] max-[750px]:hidden"><b><?php echo $_SESSION['usr_fullname'] . "&nbsp; (" . $_SESSION['usr_card_no'].")"; ?></b></p>
+            <p class="text-white ml-2 text-[16px] max-[750px]:hidden"><b><?php echo $_SESSION['usr_fullname'] . "&nbsp; (" . $_SESSION['usr_card_no'] . ")"; ?></b></p>
             <svg class="w-4 h-4 mx-1.5" aria-hidden="true" fill="white" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
             </svg>
@@ -25,7 +33,7 @@
 
          <!-- Dropdown menu -->
          <div id="dropdownAvatarName" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
-            
+
             <div class="py-2">
                <a href="../../Backend/auth/signout.php" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-gray-700">ออกจากระบบ</a>
             </div>
@@ -54,13 +62,14 @@
                   <span class="flex-1 ml-3 whitespace-nowrap text-blue-200">หน้าแรก</span>
                </a>
             </li>
-            
-               <a href="../../Backend/auth/signout.php" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white dark:hover:bg-gray-700">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900" viewBox="0 0 24 24" fill="none" stroke="#c40303" stroke-width="2" stroke-linecap="butt" stroke-linejoin="arcs">
-                     <path d="M10 3H6a2 2 0 0 0-2 2v14c0 1.1.9 2 2 2h4M16 17l5-5-5-5M19.8 12H9" />
-                  </svg>
-                  <span class="flex-1 ml-3 whitespace-nowrap text-blue-200">ออกจากระบบ</span>
-               </a>
+
+   <hr style="color:#fff;">
+            <a href="../../Backend/auth/signout.php" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white dark:hover:bg-gray-700">
+               <svg xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900" viewBox="0 0 24 24" fill="none" stroke="#c40303" stroke-width="2" stroke-linecap="butt" stroke-linejoin="arcs">
+                  <path d="M10 3H6a2 2 0 0 0-2 2v14c0 1.1.9 2 2 2h4M16 17l5-5-5-5M19.8 12H9" />
+               </svg>
+               <span class="flex-1 ml-3 whitespace-nowrap text-blue-200">ออกจากระบบ</span>
+            </a>
             </li>
          </ul>
       </div>

@@ -3,7 +3,7 @@
     $dbhost = "localhost";
     $dbroot = "root";
     $dbpass = "";
-    $dbname = "pgc_system";            
+    $dbname = "pgc_db";            
 
     $db = mysqli_connect($dbhost, $dbroot, $dbpass, $dbname)or die("Couldn't connect to database");
 

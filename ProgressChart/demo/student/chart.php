@@ -100,12 +100,12 @@ initTE({ Chart });
     <table class="table-fixed w-full">
     <thead>
         <tr>
-        <th class="self-center">วิชา</th>
-        <th class="self-center">งานที่ต้องดำเนินการ</th>
-        <th class="self-center">คะแนนเต็ม</th>
-        <th class="self-center">คะแนนที่ได้</th>
-        <th class="self-center">สถานะการตรวจ</th>
-        <th class="self-center">แจ้งดำเนินการ</th>
+        <th class="self-center" style="color:white;">วิชา</th>
+        <th class="self-center" style="color:white;">งานที่ต้องดำเนินการ</th>
+        <th class="self-center" style="color:white;">คะแนนเต็ม</th>
+        <th class="self-center" style="color:white;">คะแนนที่ได้</th>
+        <th class="self-center" style="color:white;">สถานะการตรวจ</th>
+        <th class="self-center" style="color:white;">แจ้งดำเนินการ</th>
         </tr>
     </thead>
     <tbody  class="justify-items-center">
@@ -168,12 +168,12 @@ $query_waittask = mysqli_query($con,$sql_waittask);
 <table class="table-fixed w-full">
 <thead>
     <tr>
-    <th class="self-center">วิชา</th>
-    <th class="self-center">งานที่ต้องดำเนินการ</th>
-    <th class="self-center">คะแนนเต็ม</th>
-    <th class="self-center">คะแนนที่ได้</th>
-    <th class="self-center">สถานะการตรวจ</th>
-    <th class="self-center">ดำเนินการ</th>
+    <th class="self-center" style="color:white;">วิชา</th>
+    <th class="self-center" style="color:white;">งานที่ต้องดำเนินการ</th>
+    <th class="self-center" style="color:white;">คะแนนเต็ม</th>
+    <th class="self-center" style="color:white;">คะแนนที่ได้</th>
+    <th class="self-center" style="color:white;">สถานะการตรวจ</th>
+    <th class="self-center" style="color:white;">ดำเนินการ</th>
     </tr>
 </thead>
 <tbody  class="justify-items-center">
@@ -233,12 +233,12 @@ $query_waittask = mysqli_query($con,$sql_waittask);
 <table class="table-fixed w-full">
 <thead>
     <tr>
-    <th class="self-center">วิชา</th>
-    <th class="self-center">งานที่ต้องดำเนินการ</th>
-    <th class="self-center">คะแนนเต็ม</th>
-    <th class="self-center">คะแนนที่ได้</th>
-    <th class="self-center">สถานะการตรวจ</th>
-    <th class="self-center">ดำเนินการ</th>
+    <th class="self-center" style="color:white;">วิชา</th>
+    <th class="self-center" style="color:white;">งานที่ต้องดำเนินการ</th>
+    <th class="self-center" style="color:white;">คะแนนเต็ม</th>
+    <th class="self-center" style="color:white;">คะแนนที่ได้</th>
+    <th class="self-center" style="color:white;">สถานะการตรวจ</th>
+    <th class="self-center" style="color:white;">ดำเนินการ</th>
     </tr>
 </thead>
 <tbody  class="justify-items-center">

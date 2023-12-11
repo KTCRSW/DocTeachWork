@@ -99,21 +99,24 @@ initTE({ Chart });
     <table class="table-fixed w-full">
     <thead>
         <tr>
-        <th class="self-center">รหัสงาน</th>
-        <th class="self-center">ชื่องาน</th>
-        <th class="self-center">คะแนนเต็ม</th>
-        <th class="self-center">ดำเนินการ</th>
+        <th class="self-center" style="color:white;">รหัสงาน</th>
+        <th class="self-center" style="color:white;">ชื่องาน</th>
+        <th class="self-center" style="color:white;">คะแนนเต็ม</th>
+        <th class="self-center" style="color:white;">ดำเนินการ</th>
         </tr>
     </thead>
     <tbody  class="justify-items-center">
         <form action="add_task.php" method="get">
         <tr class="bg-blue-300">
         <td ><center> - </center></td>
-        <td ><center><input type="text" name="task_name"></center></td>
-        <td ><center><input type="number" name="score"></center></td>
+        <td ><center><input type="text" name="task_name"  class="input input-bordered w-full max-w-xs" placeholder="ชื่องาน"></center></td>
+        <td ><center><input type="number" min="0" name="score" class="input input-bordered w-full max-w-xs" placeholder="คะแนน"></center></td>
+
+        <input type="text" name="sj_id" class="input input-bordered w-full max-w-xs" value="<?=$_REQUEST['sj_id']?>" hidden>
+        <input type="text" name="no_usr" class="input input-bordered w-full max-w-xs" value="<?=$_SESSION['no_usr']?>" hidden>
         <td><center>
             <button type="submit" name="sj_id" value="<?php echo $_REQUEST['sj_id']?>"  class="">เพิ่ม</button>
-        </center></td>
+            </center></td>
         </tr>
         </form>
     </tbody>
@@ -138,11 +141,11 @@ $query_finishedtask = mysqli_query($con,$sql_finishedtask);
 <table class="table-fixed w-full">
 <thead>
     <tr>
-    <th class="self-center">รหัสงาน</th>
-    <th class="self-center">งานที่ต้องดำเนินการ</th>
-    <th class="self-center">คะแนนเต็ม</th>
-    <th class="self-center">สถานะการตรวจ</th>
-    <th class="self-center">ดำเนินการ</th>
+    <th class="self-center" style="color:white;">รหัสงาน</th>
+    <th class="self-center" style="color:white;">งานที่ต้องดำเนินการ</th>
+    <th class="self-center" style="color:white;">คะแนนเต็ม</th>
+    <th class="self-center" style="color:white;">สถานะการตรวจ</th>
+    <th class="self-center" style="color:white;">ดำเนินการ</th>
     </tr>
 </thead>
 <tbody  class="justify-items-center">

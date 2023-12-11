@@ -23,7 +23,7 @@ $alltask_data = mysqli_fetch_array($query_alltask);
 $text_data = $task_data['task_unfinish'].",".$ftask_data['task_finish'].",".$donetask_data['finished'];
 ?>
 <script>
-    // TW Elements is free under AGPL, with commercial license required for specific uses. See more details: https://tw-elements.com/license/ and contact us for queries at tailwind@mdbootstrap.com 
+    // TW Elements is free under AGPL, with class="self-center" style="color:white;"commercial license required for specific uses. See more details: https://tw-elements.com/license/ and contact us for queries at tailwind@mdbootstrap.com 
 // Initialization for ES Users
 import {
   Chart,
@@ -102,12 +102,12 @@ initTE({ Chart });
     <table class="table-fixed w-full">
     <thead>
         <tr>
-        <th class="self-center">ผู้เรียน</th>
-        <th class="self-center">งานที่ต้องดำเนินการ</th>
-        <th class="self-center">คะแนนเต็ม</th>
-        <th class="self-center">คะแนนที่ได้</th>
-        <th class="self-center">สถานะ</th>
-        <th class="self-center">แจ้งดำเนินการ</th>
+        <td class="self-center" style="color:white;">ผู้เรียน</td>
+        <td class="self-center" style="color:white;">งานที่ต้องดำเนินการ</td>
+        <td class="self-center" style="color:white;">คะแนนเต็ม</td>
+        <td class="self-center" style="color:white;">คะแนนที่ได้</td>
+        <td class="self-center" style="color:white;">สถานะ</td>
+        <td class="self-center" style="color:white;">แจ้งดำเนินการ</td>
         </tr>
     </thead>
     <tbody  class="justify-items-center">
@@ -117,7 +117,7 @@ initTE({ Chart });
     while($unfinishtask = mysqli_fetch_array($query_unfinishtask)){  
         $sql_std = "SELECT * FROM users WHERE no_usr = '".$unfinishtask['usr_no_id']."'";
         $query_std = mysqli_query($con,$sql_std);
-        $std_data = mysqli_fetch_array($query_std);
+        $std_data = mysqli_fetch_assoc($query_std);
         if($colorflag == 0){
             ?>
                 <tr class="bg-blue-100">
@@ -168,12 +168,12 @@ $query_waittask = mysqli_query($con,$sql_waittask);
 <table class="table-fixed w-full">
 <thead>
     <tr>
-    <th class="self-center">ผู้เรียน</th>
-    <th class="self-center">งานที่ต้องดำเนินการ</th>
-    <th class="self-center">คะแนนเต็ม</th>
-    <th class="self-center">คะแนนที่ได้</th>
-    <th class="self-center">สถานะการตรวจ</th>
-    <th class="self-center">ดำเนินการ</th>
+    <td class="self-center" style="color:white;">ผู้เรียน</td>
+    <td class="self-center" style="color:white;">งานที่ต้องดำเนินการ</td>
+    <td class="self-center" style="color:white;">คะแนนเต็ม</td>
+    <td class="self-center" style="color:white;">คะแนนที่ได้</td>
+    <td class="self-center" style="color:white;">สถานะการตรวจ</td>
+    <td class="self-center" style="color:white;">ดำเนินการ</td>
     </tr>
 </thead>
 <tbody  class="justify-items-center">
@@ -236,12 +236,12 @@ $query_finishedtask = mysqli_query($con,$sql_finishedtask);
 <table class="table-fixed w-full">
 <thead>
     <tr>
-    <th class="self-center">ผู้เรียน</th>
-    <th class="self-center">งานที่ต้องดำเนินการ</th>
-    <th class="self-center">คะแนนเต็ม</th>
-    <th class="self-center">คะแนนที่ได้</th>
-    <th class="self-center">สถานะการตรวจ</th>
-    <th class="self-center">ดำเนินการ</th>
+    <td class="self-center" style="color:white;">ผู้เรียน</td>
+    <td class="self-center" style="color:white;">งานที่ต้องดำเนินการ</td>
+    <td class="self-center" style="color:white;">คะแนนเต็ม</td>
+    <td class="self-center" style="color:white;">คะแนนที่ได้</td>
+    <td class="self-center" style="color:white;">สถานะการตรวจ</td>
+    <td class="self-center" style="color:white;">ดำเนินการ</td>
     </tr>
 </thead>
 <tbody  class="justify-items-center">
@@ -251,7 +251,8 @@ $colorflag = 0;
 while($finishedtask = mysqli_fetch_array($query_finishedtask)){  
     $sql_std = "SELECT * FROM users WHERE no_usr = '".$finishedtask['usr_no_id']."'";
     $query_std = mysqli_query($con,$sql_std);
-    $std_data = mysqli_fetch_array($query_std);
+    while($std_data = mysqli_fetch_assoc($query_std)){
+
     if($colorflag == 0){
         ?>
             <tr class="bg-blue-100">
@@ -267,6 +268,7 @@ while($finishedtask = mysqli_fetch_array($query_finishedtask)){
 ?>
 
     <td ><center><?php echo $std_data['usr_fullname'];?></center></td>
+    <?php } ?>
     <td ><center><?php echo $finishedtask['task_name'];?></center></td>
     <td ><center><?php echo $finishedtask['score'];?></center></td>
     <td ><center><?php echo $finishedtask['score_std'];?></center></td>
