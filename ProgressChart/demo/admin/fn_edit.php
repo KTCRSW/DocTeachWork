@@ -20,7 +20,7 @@
         $cardid = $_REQUEST['cardid'];
     }
     
-    $con = mysqli_connect("localhost","root","","pcg_db")or die("err!");
+    $con = mysqli_connect("localhost","root","kittichai","pcg_db")or die("err!");
     $sql_add_std = "UPDATE users SET usr_card_no='".$cardid."',
                                         usr_fullname='".$fullname."',usr_address='".$address."',
                                         password='".$password."' WHERE no_usr = '".$id."' ";

@@ -3,14 +3,14 @@
 <?php include "../../Frontend/assets/header.php"; ?>
 <?php include "../../Frontend/assets/admin_nav.php"; ?>
 <?php //include "../function/connect.php";
-$con = mysqli_connect("localhost","root","","pcg_db")or die("err!");
-$sql_std = "SELECT * FROM users WHERE usr_std_id = '".$_REQUEST['no_user']."' ";
+    $con = mysqli_connect("localhost","root","kittichai","pcg_db")or die("err!");
+    $sql_std = "SELECT * FROM users WHERE usr_std_id = '".$_REQUEST['no_user']."' ";
 $query_std = mysqli_query($con,$sql_std);
 $data = mysqli_fetch_array($query_std);
 ?>
 <section >
 <!-- Main modal -->
-
+<center>
 <div id="default-modal" tabindex="" aria-hidden="false" class=" justify-center items-center w-full max-h-full">
     <div class="relative p-4 w-full max-w-2xl max-h-full">
         <!-- Modal content -->

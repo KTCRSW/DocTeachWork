@@ -3,8 +3,8 @@
 <?php include "../../Frontend/assets/header.php"; ?>
 <?php include "../../Frontend/assets/admin_nav.php"; ?>
 <?php //include "../function/connect.php";
-$con = mysqli_connect("localhost","root","","pcg_db")or die("err!");
-$sql_std = "SELECT * FROM users WHERE usr_type = '2' ";
+    $con = mysqli_connect("localhost","root","kittichai","pcg_db")or die("err!");
+    $sql_std = "SELECT * FROM users WHERE usr_type = '2' ";
 $query_std = mysqli_query($con,$sql_std);
 ?>
 

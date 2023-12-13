@@ -9,7 +9,7 @@
 
 ?>
 <?php //include "../function/connect.php";
-$con = mysqli_connect("localhost","root","","pcg_db")or die("err!");
+    $con = mysqli_connect("localhost","root","kittichai","pcg_db")or die("err!");
 
 $sql_std_count = "SELECT count(no_usr) AS std_total FROM users WHERE usr_type = '3'";
 $query_std_count = mysqli_query($con,$sql_std_count);

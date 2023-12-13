@@ -3,8 +3,8 @@
 <?php include "../../Frontend/assets/header.php"; ?>
 <?php include "../../Frontend/assets/user_nav.php"; ?>
 <?php //include "../function/connect.php";
-$con = mysqli_connect("localhost","root","","pcg_db")or die("err!");
-$sql_task = "SELECT count(pg_id) AS task_unfinish, sum(score_std) AS total_score FROM progress WHERE sj_id = '".$_REQUEST['sj_id']."' AND usr_no_id = '".$_SESSION['no_usr']."' AND ack_std = '0' ";
+    $con = mysqli_connect("localhost","root","kittichai","pcg_db")or die("err!");
+    $sql_task = "SELECT count(pg_id) AS task_unfinish, sum(score_std) AS total_score FROM progress WHERE sj_id = '".$_REQUEST['sj_id']."' AND usr_no_id = '".$_SESSION['no_usr']."' AND ack_std = '0' ";
 $query_task = mysqli_query($con,$sql_task);
 $task_data = mysqli_fetch_array($query_task);
 

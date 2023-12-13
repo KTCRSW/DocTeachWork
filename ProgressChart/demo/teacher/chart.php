@@ -3,8 +3,8 @@
 <?php include "../../Frontend/assets/header.php"; ?>
 <?php include "../../Frontend/assets/teacher_nav.php"; ?>
 <?php //include "../function/connect.php";
-$con = mysqli_connect("localhost","root","","pcg_db")or die("err!");
-$sql_task = "SELECT count(pg_id) AS task_unfinish, sum(score_std) AS total_score FROM progress WHERE sj_id = '".$_REQUEST['sj_id']."'  AND ack_std = '0' ";
+    $con = mysqli_connect("localhost","root","kittichai","pcg_db")or die("err!");
+    $sql_task = "SELECT count(pg_id) AS task_unfinish, sum(score_std) AS total_score FROM progress WHERE sj_id = '".$_REQUEST['sj_id']."'  AND ack_std = '0' ";
 $query_task = mysqli_query($con,$sql_task);
 $task_data = mysqli_fetch_array($query_task);
 
@@ -201,7 +201,7 @@ while($waittask = mysqli_fetch_array($query_waittask)){
         <td ><center><?php echo $std_data['usr_fullname'];?></center></td>
         <td ><center><?php echo $waittask['task_name'];?></center></td>
         <td ><center><?php echo $waittask['score'];?></center></td>
-        <td ><center><input type="number" name="score_std"></center></td>
+        <td ><center><input type="number" class="input input-bordered w-full max-w-xs border-solid name="score_std"></center></td>
         <td ><center><?php echo ($waittask['ack_teacher']!=true)?"ยังไม่ตรวจ":"ตรวจแล้ว";?></center></td>
         <td ><center>
             <button type="submit" value="<?php echo $waittask['pg_id'];?>" name="submit" class="bg-green-500 hover:bg-green-700  font-bold py-2 px-4 rounded">ส่งผลการตรวจ</button>

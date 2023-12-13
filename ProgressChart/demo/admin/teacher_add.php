@@ -18,7 +18,7 @@
         $cardid = $_REQUEST['cardid'];
     }
     
-    $con = mysqli_connect("localhost","root","","pcg_db")or die("err!");
+    $con = mysqli_connect("localhost","root","kittichai","pcg_db")or die("err!");
     $sql_add_std = "INSERT INTO `users`(`no_usr`, `usr_card_no`, `usr_std_id`, 
                                     `usr_name`, `usr_fullname`, `usr_address`, 
                                     `usr_type`, `pic`, `password`) 

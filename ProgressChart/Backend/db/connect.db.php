@@ -2,7 +2,7 @@
 
     $dbhost = "localhost";
     $dbroot = "root";
-    $dbpass = "";
+    $dbpass = "kittichai";
     $dbname = "pgc_db";            
 
     $db = mysqli_connect($dbhost, $dbroot, $dbpass, $dbname)or die("Couldn't connect to database");

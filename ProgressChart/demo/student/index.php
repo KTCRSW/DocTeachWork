@@ -3,8 +3,8 @@
 <?php include "../../Frontend/assets/header.php"; ?>
 <?php include "../../Frontend/assets/user_nav.php"; ?>
 <?php //include "../function/connect.php";
-$con = mysqli_connect("localhost","root","","pcg_db")or die("err!");
-$sql = "SELECT * FROM enrollment WHERE usr_std_id = '".$_SESSION['no_usr']."'";
+    $con = mysqli_connect("localhost","root","kittichai","pcg_db")or die("err!");
+    $sql = "SELECT * FROM enrollment WHERE usr_std_id = '".$_SESSION['no_usr']."'";
 $query = mysqli_query($con,$sql);
 
 

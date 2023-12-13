@@ -3,8 +3,8 @@
 <?php include "../../Frontend/assets/header.php"; ?>
 <?php include "../../Frontend/assets/teacher_nav.php"; ?>
 <?php //include "../function/connect.php";
-$con = mysqli_connect("localhost","root","","pcg_db")or die("err!");
-$sql_task = "SELECT count(pg_id) AS task_unfinish, sum(score_std) AS total_score FROM progress WHERE sj_id = '".$_REQUEST['sj_id']."'  AND ack_std = '0' ";
+    $con = mysqli_connect("localhost","root","kittichai","pcg_db")or die("err!");
+    $sql_task = "SELECT count(pg_id) AS task_unfinish, sum(score_std) AS total_score FROM progress WHERE sj_id = '".$_REQUEST['sj_id']."'  AND ack_std = '0' ";
 $query_task = mysqli_query($con,$sql_task);
 $task_data = mysqli_fetch_array($query_task);
 
@@ -109,11 +109,11 @@ initTE({ Chart });
         <form action="add_task.php" method="get">
         <tr class="bg-blue-300">
         <td ><center> - </center></td>
-        <td ><center><input type="text" name="task_name"  class="input input-bordered w-full max-w-xs" placeholder="ชื่องาน"></center></td>
-        <td ><center><input type="number" min="0" name="score" class="input input-bordered w-full max-w-xs" placeholder="คะแนน"></center></td>
+        <td ><center><input type="text" name="task_name"  class="input input-bordered w-full max-w-xs border-solid" placeholder="ชื่องาน"></center></td>
+        <td ><center><input type="number" min="0" name="score" class="input input-bordered w-full max-w-xs border-solid" placeholder="คะแนน"></center></td>
 
-        <input type="text" name="sj_id" class="input input-bordered w-full max-w-xs" value="<?=$_REQUEST['sj_id']?>" hidden>
-        <input type="text" name="no_usr" class="input input-bordered w-full max-w-xs" value="<?=$_SESSION['no_usr']?>" hidden>
+        <input type="text" name="sj_id" class="input input-bordered w-full max-w-xs border-solid	" value="<?=$_REQUEST['sj_id']?>" hidden>
+        <input type="text" name="no_usr" class="input input-bordered w-full max-w-xs border-solid	" value="<?=$_SESSION['no_usr']?>" hidden>
         <td><center>
             <button type="submit" name="sj_id" value="<?php echo $_REQUEST['sj_id']?>"  class="">เพิ่ม</button>
             </center></td>

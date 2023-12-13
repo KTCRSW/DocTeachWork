@@ -3,7 +3,7 @@
 <?php include "../../Frontend/assets/header.php"; ?>
 <?php include "../../Frontend/assets/admin_nav.php"; ?>
 <?php //include "../function/connect.php";
-$con = mysqli_connect("localhost","root","","pcg_db")or die("err!");
+$con = mysqli_connect("localhost","root","kittichai","pcg_db")or die("err!");
 $sql_std = "SELECT * FROM users WHERE usr_type = '3' ";
 $query_std = mysqli_query($con,$sql_std);
 ?>
@@ -69,7 +69,7 @@ $query_std = mysqli_query($con,$sql_std);
     <div>
         <!-- Modal toggle -->
         <div><hr class="p-2"/>
-            <center><button data-modal-target="default-modal" data-modal-toggle="default-modal" class="block text-black bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center bg-blue-600 hover:bg-blue-700 focus:ring-blue-800 btn btn-outline" type="button">
+            <center><button data-modal-target="default-modal" data-modal-toggle="default-modal" class="block text-black bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center btn btn-success bg-blue-600 hover:bg-blue-700 focus:ring-blue-800 btn btn-outline" type="button">
             เพิ่มนักศึกษา
             </button></center>
         </div>

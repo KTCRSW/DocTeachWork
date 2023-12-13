@@ -1,3 +1,3 @@
 <?
-    $con = mysqli_connect("localhost","root","","pcg_db")or die("err!");
+    $con = mysqli_connect("localhost","root","kittichai","pcg_db")or die("err!");
 ?>

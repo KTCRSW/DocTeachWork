@@ -1,7 +1,7 @@
 <?php
     session_start();
     //include('../function/connect.php');
-    $con = mysqli_connect("localhost","root","","pcg_db")or die("err!");
+    $con = mysqli_connect("localhost","root","kittichai","pcg_db")or die("err!");
     if($_REQUEST['username'] != ""){
         $sql = "SELECT * FROM users WHERE usr_name = '".$_REQUEST['username']."'";
         $query = mysqli_query($con,$sql);
